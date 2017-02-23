@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <div class="share">
+        <a href="javascript:void(0)" class="" onclick="dofristshare('sina')"><img src="image/sina.png" alt="分享到新浪"></a>
+        <a href="javascript:void(0)" class="" onclick="dofristshare('tx')"><img src="image/qq.png" alt="分享到qq"></a>
+        <a href="javascript:void(0)" class="" onclick="dofristshare('rr')"><img src="image/rr.png" alt="分享到人人"></a>
+        <a href="javascript:void(0)" class="" onclick="dofristshare('qzone')"><img src="image/wx.png" alt="分享到空间"></a>
+        <a href="javascript:void(0)" class="" onclick="dofristshare('douban')"><img src="image/db.png" alt="分享到豆瓣"></a>
+    </div>
+    <script>
+        function dofristshare(type) {
+            var title = encodeURIComponent("新年快乐，鸡年大吉！");
+            var link = encodeURIComponent("www.baidu.com");
+            var img = encodeURIComponent("http://image.baidu.com/search/detail?ct=503316480&z=0&ipn=d&word=%E5%9B%BE%E7%89%87&step_word=&hs=0&pn=2&spn=0&di=55938909730&pi=0&rn=1&tn=baiduimagedetail&is=0%2C0&istype=0&ie=utf-8&oe=utf-8&in=&cl=2&lm=-1&st=undefined&cs=2320677199%2C2423076609&os=634714958%2C3514166245&simid=4229214024%2C515551745&adpicid=0&lpn=0&ln=1994&fr=&fmq=1487576348140_R&fm=&ic=undefined&s=undefined&se=&sme=&tab=0&width=&height=&face=undefined&ist=&jit=&cg=&bdtype=0&oriquery=&objurl=http%3A%2F%2Fpic2.cxtuku.com%2F00%2F02%2F31%2Fb945758fd74d.jpg&fromurl=ippr_z2C%24qAzdH3FAzdH3Fooo_z%26e3Bvxp7h7_z%26e3Bv54AzdH3Frtv_dn8l9c_z%26e3Bip4s&gsm=0&rpstart=0&rpnum=0");
+            if(type == "sina"){
+                window.open("http://v.t.sina.com.cn/share/share.php?url="+link+"&title="+title+"&content=utf8&pic="+img);
+            }
+            if (type == "tx") {
+                window.open("http://v.t.qq.com/share/share.php?url=" + link + "&title=" + title + "&pic=" + img);
+            }
+            if (type == "qzone") {
+                window.open("http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=" + link + "&title=" + title  + "&pics=" + img);
+            }
+            if (type == "rr") {
+                window.open("http://widget.renren.com/dialog/share?url=" + link + "&title=" + title  + "&pic=" + img);
+            }
+            if (type == "douban") {
+                window.open("http://www.douban.com/recommend/?url=" + link + "&title=" + title + "&image=" + img);
+            }
+        }
+    </script>
+</body>
+</html>
